@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <section className="h-full flex flex-col items-center justify-center h-screen bg-gray-50 text-center px-4">
+    <section className="h-full flex flex-col items-center justify-center bg-gray-50 text-center px-4">
       <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
         Hi, I'm Seong Ju👋
       </h1>
