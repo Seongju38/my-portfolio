@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { Home, User, Folder, Mail } from "lucide-react";
-import { useState } from "react";
 
-function Sidebar() {
-  const [expanded, setExpanded] = useState(false);
+type SidebarProps = {
+  expanded: boolean;
+  setExpanded: (value: boolean) => void;
+};
 
+function Sidebar({ expanded, setExpanded }: SidebarProps) {
   const menuItems = [
     { name: "Home", path: "/", icon: <Home size={20} /> },
     { name: "About", path: "/about", icon: <User size={20} /> },
@@ -50,33 +52,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-
-// // src/components/Sidebar.tsx
-// import { Link } from "react-router-dom";
-
-// function Sidebar() {
-//   const menuItems = [
-//     { name: "HOME", path: "/" },
-//     { name: "ABOUT", path: "/about" },
-//     { name: "PROJECT", path: "/projects" },
-//     { name: "CONTACT", path: "/contact" },
-//   ];
-
-//   return (
-//     <aside className="h-screen w-16 hover:w-40 bg-gray-900 text-white fixed top-0 left-0 transition-all duration-300 ease-in-out z-50">
-//       <nav className="flex flex-col items-center hover:items-start pt-8 space-y-4 px-2">
-//         {menuItems.map((item) => (
-//           <Link
-//             key={item.name}
-//             to={item.path}
-//             className="w-full px-2 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition"
-//           >
-//             {item.name}
-//           </Link>
-//         ))}
-//       </nav>
-//     </aside>
-//   );
-// }
-
-// export default Sidebar;
