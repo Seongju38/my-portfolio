@@ -18,6 +18,9 @@ function Navbar() {
         <Link to={"/about"} className={linkStyle("/about")}>
           About
         </Link>
+        <Link to={"/projects"} className={linkStyle("/projects")}>
+          Projects
+        </Link>
       </div>
     </nav>
   );
