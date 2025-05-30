@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Sidebar from "./components/Sidebar";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import { useState } from "react";
@@ -27,7 +27,7 @@ function App() {
           <Route path="/projects" element={<Projects />}></Route>
         </Routes>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

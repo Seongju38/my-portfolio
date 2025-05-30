@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { Home, User, Folder, Mail } from "lucide-react";
 
 type SidebarProps = {
@@ -8,10 +7,10 @@ type SidebarProps = {
 
 function Sidebar({ expanded, setExpanded }: SidebarProps) {
   const menuItems = [
-    { name: "Home", path: "/", icon: <Home size={20} /> },
-    { name: "About", path: "/about", icon: <User size={20} /> },
-    { name: "Projects", path: "/projects", icon: <Folder size={20} /> },
-    { name: "Contact", path: "/contact", icon: <Mail size={20} /> },
+    { name: "Home", anchor: "#home", icon: <Home size={20} /> },
+    { name: "About", anchor: "#about", icon: <User size={20} /> },
+    { name: "Projects", anchor: "#projects", icon: <Folder size={20} /> },
+    { name: "Contact", anchor: "#contact", icon: <Mail size={20} /> },
   ];
 
   return (
@@ -26,25 +25,19 @@ function Sidebar({ expanded, setExpanded }: SidebarProps) {
     >
       <nav className="flex flex-col items-start pt-6 px-2 space-y-4">
         {menuItems.map((item) => (
-          <NavLink
-            to={item.path}
+          <a
+            href={item.anchor}
             key={item.name}
-            className={({ isActive }) =>
-              `
-                flex items-center gap-3 w-full px-3 py-2 rounded-lg transition-all duration-300
-                ${
-                  isActive
-                    ? "bg-blue-600 text-white font-semibold"
-                    : "hover:bg-gray-700"
-                }
-              `
-            }
+            className={`
+              flex items-center gap-3 w-full px-3 py-2 rounded-lg transition-all duration-300
+              hover:bg-gray-700
+            `}
           >
             <div className="min-w-[20px]">{item.icon}</div>
             {expanded && (
               <span className="whitespace-nowrap text-sm">{item.name}</span>
             )}
-          </NavLink>
+          </a>
         ))}
       </nav>
     </aside>
