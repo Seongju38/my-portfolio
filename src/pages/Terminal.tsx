@@ -93,7 +93,6 @@ const Terminal: React.FC = () => {
     if (cmd === "help") {
       print(
         [
-          "",
           "Available commands:",
           "  help                Show this help",
           "  ls                  List sections",
@@ -101,12 +100,11 @@ const Terminal: React.FC = () => {
           "  build               Simulate building portfolio",
           "  run | start         Launch portfolio (/home)",
           "  build && run        Build then launch",
-          "  about               Go to /about",
-          "  projects            Go to /projects",
-          "  contact             Go to /contact",
-          "  home                Go to /home",
+          "  cd home             Go to /home",
+          "  cd about            Go to /about",
+          "  cd projects         Go to /projects",
+          "  cd contact          Go to /contact",
           "  clear               Clear screen",
-          "",
         ].join("\n")
       );
       return;
@@ -127,12 +125,12 @@ const Terminal: React.FC = () => {
     }
 
     // 라우팅 명령
-    if (cmd === "about") return navigateWithEcho("/about", "Opening About…");
-    if (cmd === "projects")
+    if (cmd === "cd home") return navigateWithEcho("/home", "Opening Home…");
+    if (cmd === "cd about") return navigateWithEcho("/about", "Opening About…");
+    if (cmd === "cd projects")
       return navigateWithEcho("/projects", "Opening Projects…");
-    if (cmd === "contact")
+    if (cmd === "cd contact")
       return navigateWithEcho("/contact", "Opening Contact…");
-    if (cmd === "home") return navigateWithEcho("/home", "Opening Home…");
 
     // 실행/빌드
     if (cmd === "build") {
