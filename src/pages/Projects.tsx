@@ -7,7 +7,7 @@ function Projects() {
       description:
         "질병 데이터와 병원/약국 위치 정보를 제공하는 React 기반 웹 앱. 공공 API와 Kakao 지도 API를 활용.",
       tech: ["React", "ASP.NET", "Kakao API"],
-      github: "https://github.com/Seongju38/health-info",
+      github: "https://github.com/NoOutsider/HealthInfoApp",
     },
     {
       title: "Memo Project",
@@ -26,11 +26,11 @@ function Projects() {
   ];
 
   return (
-    <section className="max-w-5xl mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold text-gray-800 mb-10 text-center">
-        Projects
+    <section className="max-w-6xl mx-auto px-2 md:px-4 py-4">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#9cdcfe] mb-6 font-mono">
+        ./projects
       </h2>
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
