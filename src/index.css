@@ -12,9 +12,10 @@
     opacity: 0;
   }
 }
-/* .animate-cursor {
+
+.animate-cursor {
   animation: cursor-blink 1s step-end infinite;
-} */
+}
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
