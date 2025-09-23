@@ -1,6 +1,7 @@
 import { useEffect, useState, ReactNode } from "react";
 import About from "./About";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 function TerminalWindow({
   title,
@@ -94,6 +95,14 @@ function Home() {
           <pre className="text-[#b3b3b3] text-sm">{`seongju@ubuntu:~$ ls ./projects`}</pre>
           <div className="mt-4">
             <Projects />
+          </div>
+        </TerminalWindow>
+
+        {/* Contact Section */}
+        <TerminalWindow title="contact — bash" id="contact">
+          <pre className="text-[#b3b3b3] text-sm">{`seongju@ubuntu:~$ ./contact --interactive`}</pre>
+          <div className="mt-4">
+            <Contact />
           </div>
         </TerminalWindow>
       </div>
