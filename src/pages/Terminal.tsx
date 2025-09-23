@@ -23,7 +23,7 @@ const Terminal: React.FC = () => {
     { type: "system", text: "Ubuntu 24.04 LTS (Jammy) — tty1" },
     {
       type: "stdout",
-      text: `Welcome, ${PROMPT_USER}. Type "help" to get started.`,
+      text: `Welcome, SeongJu's Space. Type "help" to get started.`,
     },
   ]);
   const [input, setInput] = useState("");

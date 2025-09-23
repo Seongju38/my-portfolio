@@ -7,6 +7,7 @@ function Projects() {
       description:
         "질병 데이터와 병원/약국 위치 정보를 제공하는 React 기반 웹 앱. 공공 API와 Kakao 지도 API를 활용.",
       tech: ["React", "ASP.NET", "Kakao API"],
+      notion: "https://www.notion.so/2765574a7c55800a9d1ed7091f904ac4",
       github: "https://github.com/NoOutsider/HealthInfoApp",
     },
     {
@@ -14,6 +15,7 @@ function Projects() {
       description:
         "메모를 작성, 수정, 삭제할 수 있는 React 학습용 프로젝트. localStorage 연동.",
       tech: ["React", "TypeScript"],
+      notion: "https://www.notion.so/your-notion-page-2",
       github: "https://github.com/Seongju38/memo-project",
     },
     {
@@ -21,6 +23,7 @@ function Projects() {
       description:
         "React 기반 설문조사 UI 프로토타입. 사용자 선택 기반 결과 수집 처리.",
       tech: ["React"],
+      notion: "https://www.notion.so/your-notion-page-3",
       github: "https://github.com/Seongju38/survey-pie",
     },
   ];
